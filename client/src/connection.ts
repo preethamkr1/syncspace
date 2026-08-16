@@ -127,7 +127,7 @@ const HEARTBEAT_INTERVAL =
 // Development server.
 
 const SERVER_URL =
-    "ws://localhost:8080";
+    "wss://syncspace-iuo1.onrender.com";
 
 
 const ROOM_ID =
