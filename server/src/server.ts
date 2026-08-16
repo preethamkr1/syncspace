@@ -15,7 +15,7 @@ import {
 // CONFIGURATION
 // ============================================================
 
-const PORT = 8080;
+const PORT = Number(process.env.PORT) || 8080;
 const MAX_PARTICIPANTS = 15;
 
 const HEARTBEAT_INTERVAL = 5_000;
@@ -1710,10 +1710,11 @@ heartbeatTimer.unref();
 
 server.listen(
     PORT,
+    "0.0.0.0",
     () => {
 
         console.log(
-            `Server listening on http://localhost:${PORT}`
+            `Server listening on http://0.0.0.0:${PORT}`
         );
     }
 );
